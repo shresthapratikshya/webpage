@@ -1,0 +1,162 @@
+.loginpage {
+    display: flex;
+    margin: 20px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30vh;
+    margin-right: 30vh;
+    width: 50%;
+}
+
+.login__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.login__title--image {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.login__email,
+.login__password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.login__input {
+    height: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.login__label {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.login__remember {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.login__checktext {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.signin__button {
+    background-color: #3258ff;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+pre,
+.login__signup {
+    align-self: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+u {
+    text-decoration: none;
+    color: blue;
+}
+
+.login__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.login__google {
+    background-color: white;
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.login__facebook {
+    background-color: #3258ff;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__apple {
+    background-color: black;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__copyright {
+    text-align: center;
+    margin-top: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.content__description {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.content__image {
+    height: 60vh;
+}
