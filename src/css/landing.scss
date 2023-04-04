@@ -4,15 +4,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
-.navbar{
+
+.navbar {
     @include header-footer;
 }
-footer{
+
+footer {
     @include header-footer($theme: #13183e);
 }
 
-@mixin buttons($buttons:#13183e){
+@mixin buttons($buttons: #13183e) {
     margin-right: 10vw;
     border-radius: 25px;
     height: 7vh;
@@ -25,48 +28,53 @@ footer{
     font-size: 15px;
 }
 
-.navbar{
-    h1{
+.navbar {
+    h1 {
         margin-left: 10vw;
         font-size: 30px;
     }
-    .navbar__button--gradient{
+
+    .navbar__button--gradient {
         @include buttons;
     }
 }
-.footer{
+
+.footer {
     h1 {
         margin-left: 10vw;
         font-size: 30px;
         color: white;
     }
-    
+
     .footer__button--gradient {
-        @include buttons($buttons:linear-gradient(180deg, #8544D8, #de2eaf));
+        @include buttons($buttons: linear-gradient(180deg, #8544D8, #de2eaf));
     }
 }
 
-.content{
-    background: linear-gradient(180deg, white,#f0f2ff);
+.content {
+    background: linear-gradient(180deg, white, #f0f2ff);
 }
 
-.frontpage{
+.frontpage {
     display: flex;
 }
 
-.frontpage__text{
+.frontpage__text {
     margin-left: 10vw;
     margin-top: 10vh;
-    h1{
+
+    h1 {
         font-size: 4em;
         padding-right: 20vw;
     }
-    p{
+
+    p {
         font-size: 20px;
         font-weight: lighter;
-        margin-right: 30vw;
+        width: 30vw;
     }
-    .frontpage__text--gradientbutton{
+
+    .frontpage__text--gradientbutton {
         @include buttons($buttons: linear-gradient(180deg, #ff6c4b, #de2eaf));
         margin-top: 5vh;
         margin-bottom: 15vh;
@@ -79,7 +87,7 @@ footer{
     right: 0;
 }
 
-@mixin members-courses($top:6rem,$left:13rem){
+@mixin members-courses($top: 6rem, $left: 13rem) {
     position: absolute;
     top: $top;
     left: $left;
@@ -90,24 +98,27 @@ footer{
     box-shadow: rgba(1, 20, 6, 0.15) 0px 48px 100px 0px;
     padding: 5px;
 }
-.frontpage__image{
-    img{
-    height: 45vh;
-    margin-right: 10vh;
-    margin-top: 15vh;
-    position: relative;
-    top: 0;
-    right: 0;
+
+.frontpage__image {
+    img {
+        height: 45vh;
+        margin-right: 10vh;
+        margin-top: 15vh;
+        position: relative;
+        top: 0;
+        right: 0;
     }
-    .frontpage__image--members{
-            @include members-courses;
+
+    .frontpage__image--members {
+        @include members-courses;
     }
-    .frontpage__image--courses{
-        @include members-courses(25rem, -5rem);
+
+    .frontpage__image--courses {
+        @include members-courses(20rem, -5rem);
     }
 }
 
-.course__section{
+.course__section {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
@@ -115,10 +126,10 @@ footer{
 
 }
 
-@mixin section($background:linear-gradient(180deg, #ff6c4b, #de2eaf),$color:white){
+@mixin section($background: linear-gradient(180deg, #ff6c4b, #de2eaf), $color: white) {
     background: $background;
-    height: 35vh;
-    width: 20vw;
+    height: 42vh;
+    width: 25vw;
     margin: 20px;
     border-radius: 10px;
     color: $color;
@@ -126,31 +137,37 @@ footer{
     margin-bottom: 10vh;
 }
 
-.course__section--gradient{
+.course__section--gradient {
     @include section;
     display: flex;
     align-items: center;
     justify-content: center;
-    h1{
+
+    h1 {
         align-items: center;
         justify-content: center
     }
 }
-.course__section--article{
-    @include section($background:white,$color:black);
+
+.course__section--article {
+    @include section($background: white, $color: black);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     text-align: left;
     position: relative;
-    div{
+
+    div {
         padding: 25px;
     }
-    b{
+
+    b {
         text-decoration: none;
         color: #de2eaf;
     }
-    p{
+
+    p {
         min-height: 100px;
     }
+
     .icon {
         position: absolute;
         background: linear-gradient(180deg, #ff6c4b, #de2eaf);
@@ -160,7 +177,189 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top:-15%;
+        margin-top: -10%;
         margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .navbar {
+        h1 {
+            font-size: 35px;
+            margin-left: 4vw;
+        }
+
+        .navbar__button--gradient {
+            height: 6vh;
+            width: 20vw;
+            font-size: 15px;
+            margin-right: 4vw;
+        }
+    }
+
+    .footer {
+        h1 {
+            margin-left: 4vw;
+            font-size: 35px;
+        }
+
+        .footer__button--gradient {
+            height: 6vh;
+            width: 20vw;
+            font-size: 15px;
+            margin-right: 4vw;
+            margin-right: 4vw;
+        }
+    }
+
+    .frontpage__text {
+        margin-left: 4vw;
+        margin-top: 10vh;
+
+        h1 {
+            font-size: 2.4em;
+            padding-right: 10vw;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .frontpage__text--gradientbutton {
+            width: 20vw;
+        }
+    }
+
+    .frontpage {
+        justify-content: space-between;
+
+        img {
+            height: 40vh;
+            margin-right: 20vh;
+        }
+
+        .frontpage__image--courses {
+            width: 14vw;
+            top: 14rem;
+            left: -4rem;
+        }
+
+        .frontpage__image--members {
+            width: 14vw;
+            top: 2rem;
+            left: 10rem;
+        }
+    }
+
+    .course__section {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        margin-top: 10vh;
+    }
+
+    .course__section--gradient,
+    .course__section--article {
+        height: 50vh;
+        width: 40vw;
+
+        .icon {
+            margin-top: -10%;
+        }
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .navbar {
+        h1 {
+            font-size: 30px;
+            margin-left: 4vw;
+        }
+
+        .navbar__button--gradient {
+            height: 8vh;
+            width: 40vw;
+            font-size: 15px;
+            margin-right: 4vw;
+        }
+    }
+
+    .footer {
+        h1 {
+            font-size: 30px;
+            margin-left: 4vw;
+        }
+
+        .footer__button--gradient {
+            height: 8vh;
+            width: 40vw;
+            font-size: 15px;
+            margin-right: 4vw;
+        }
+    }
+
+    .frontpage {
+        display: flex;
+        flex-direction: column;
+
+        .frontpage__text {
+            margin-top: 10px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                text-align: justify;
+                margin-right: 10px;
+                width: 90%;
+                margin-bottom: 1vh;
+            }
+
+            .frontpage__text--gradientbutton {
+                height: 8vh;
+                width: 40vw;
+                font-size: 15px;
+                margin-top: 3vh;
+            }
+        }
+
+        .frontpage__image {
+            img {
+                height: 32vh;
+                margin: 4vw;
+                margin-left: 20vw;
+            }
+
+            .frontpage__image--members {
+                top: -9vh;
+                width: 30vw;
+                left: 60vw;
+            }
+
+            .frontpage__image--courses {
+                top: 30vh;
+                width: 30vw;
+                left: 10vw;
+            }
+        }
+    }
+
+    .course__section {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-top: 10vh;
+    }
+
+    .course__section--gradient,
+    .course__section--article {
+        height: 45vh;
+        width: 80vw;
+
+        .icon {
+            margin-top: -10%;
+        }
     }
 }

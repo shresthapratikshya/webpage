@@ -15,14 +15,14 @@ const Landing = () => {
 
             <main className='content'>
                 <div className="frontpage">
-                    <div className="frontpage__text">
+                    <div className="col-1 frontpage__text">
                         <h1>Maximize skill,<br /> minimize budget</h1>
                         <p>Our modern courses across a range of in-demand skills will
                             give you the knowledge you need to live the life you want.
                         </p>
                         <button className='frontpage__text--gradientbutton'>Get Started</button>
                     </div>
-                    <div className='frontpage__image'>
+                    <div className='col-2 frontpage__image'>
                         <img src='Potrait.jpg' alt='Potrait'></img>
                         <div className='frontpage__image--members'>
                             <p>Members</p>
